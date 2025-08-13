@@ -1,0 +1,3340 @@
+PARSFILE
+
+#EXPANDED_PARSFILE 2.0
+
+! This is an expansion of the parsfile: "Runs\Run258.par"
+! It contains the contents of that file plus the contents of any files linked
+! with the "PARSFILE" or "SPECIAL_PARSFILE" keywords.
+
+! File created: 16:59 on Feb. 27, 2023 by BikeSim Version 2.0, October 2008
+
+PRODUCT_NAME BikeSim
+
+ENTER_PARSFILE Runs\Run258.par`02-08-2023`13:21:28
+#FullDataName BikeSim Run Control`cuoiki #1`
+#VehicleCode fixed_caster
+
+OPT_ALL_WRITE 0
+
+ENTER_PARSFILE Models\Simulink\Cmex113.par`01-06-2023`14:41:01
+#FullDataName Models: Simulink`torque control`
+#RunMdlFile Extensions\Simulink\Ebike.mdl
+#RingCtrl1 2
+OPT_INT_METHOD 2
+#RingCtrl2 1
+*X64SOLVER 1
+#CheckBox0 0    
+*USE_ALT_DIR 0
+#CheckBox1 0    
+*USE_DIFF_SOLVERS 0
+#CheckBox2 1    
+OPT_IO_UPDATE 1
+
+
+ENTER_PARSFILE IO_Channels\I_Channels\I_Ch112.par`01-06-2023`14:41:55
+#FullDataName I/O Channels: Import`input`
+*README_FILE Programs\solvers\ReadMe\fixed_caster_imports_tab.txt
+
+#MiscYellow0
+IMP_MYDR_2 Add 0.0 0
+#ENDMYellow
+
+#RingCtrl0 0
+
+LOG_ENTRY Used Dataset: I/O Channels: Import; input
+#Library : I/O Channels: Import
+#DataSet : input
+#Category: 
+#FileID  : I_Ch112
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-06-2023 14:41:55
+#VehCode Import Channels
+
+EXIT_PARSFILE IO_Channels\I_Channels\I_Ch112.par
+
+#BlueLink0 I/O Channels: Import`input` ` , Import
+
+
+ENTER_PARSFILE IO_Channels\O_Channels\O_Ch111.par`11-09-2021`20:09:02
+#FullDataName I/O Channels: Export`output`
+*README_FILE Programs\solvers\ReadMe\fixed_caster_outputs_tab.txt
+
+#MiscYellow0
+#Number of Selected Channels: 1
+#CHN_NAME: Vx
+#ENDMYellow
+
+#CheckBox0 0    
+
+#RingCtrl0 0
+
+EXP_Vx
+
+LOG_ENTRY Used Dataset: I/O Channels: Export; output
+#Library : I/O Channels: Export
+#DataSet : output
+#Category: 
+#FileID  : O_Ch111
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 11-09-2021 20:09:02
+#VehCode Output Channels
+
+EXIT_PARSFILE IO_Channels\O_Channels\O_Ch111.par
+
+#BlueLink1 I/O Channels: Export`output` ` , Output
+
+
+LOG_ENTRY Used Dataset: Models: Simulink; torque control
+#Library : Models: Simulink
+#DataSet : torque control
+#Category: 
+#FileID  : Cmex113
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-06-2023 14:41:01
+#VehCode 
+
+EXIT_PARSFILE Models\Simulink\Cmex113.par
+
+#BlueLink12 Models: Simulink`torque control` ` , 
+
+
+ENTER_PARSFILE Animator\Cameras\Camera123.par`10-13-2008`13:49:12
+#FullDataName Animator: Camera Setup`Rear/Side View Wide, No Yaw`Bike Reference
+#RingCtrl1 0
+
+#CheckBox0 0    
+#CheckBox1 0    
+
+GHOST_COUNT 0
+SET_CAMERA_Reference_Frame Bike X-Y-Z - No Yaw
+
+ENTER_PARSFILE Animator\Frames\Frame125.par`10-13-2008`13:49:06
+#FullDataName Animator: Reference Frame`Bike X-Y-Z - No Yaw`Bike Tracking
+ADD_REFERENCE_FRAME Bike X-Y-Z - No Yaw
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_rdr
+SET_Y_NAME Y_rdr
+SET_Z_NAME Z_rdr
+
+#MiscYellow0
+cam_global_ambient .4 .4 .4 1
+#ENDMYellow
+
+WRT_X_rdr
+ANI_X_rdr
+WRT_Y_rdr
+ANI_Y_rdr
+WRT_Z_rdr
+ANI_Z_rdr
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Bike Tracking } Bike X-Y-Z - No Yaw
+#Library : Animator: Reference Frame
+#DataSet : Bike X-Y-Z - No Yaw
+#Category: Bike Tracking
+#FileID  : Frame125
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:06
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame125.par
+
+#BlueLink0 Animator: Reference Frame`Bike X-Y-Z - No Yaw` Bike Tracking` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Bike X-Y-Z - No Yaw
+SET_FOV 73.2
+*SET_FOV 73.2
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 150
+SET_ELEVATION 3.1
+SET_DISTANCE 4.8
+GHOST_COUNT 0
+*INTERVAL_X 5
+*INTERVAL_Y 5
+*MIN_X -100
+*MIN_Y 100
+*MAX_X 100
+*MAX_Y 100
+FOG_SCALE .1
+SET_FIELD_OF_VIEW 47
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Bike Reference } Rear/Side View Wide, No Yaw
+#Library : Animator: Camera Setup
+#DataSet : Rear/Side View Wide, No Yaw
+#Category: Bike Reference
+#FileID  : Camera123
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:12
+#VehCode Camera
+
+EXIT_PARSFILE Animator\Cameras\Camera123.par
+
+#BlueLink0 Animator: Camera Setup`Rear/Side View Wide, No Yaw` Bike Reference` , Animator camera
+
+#CheckBox0 1    
+#CheckBox1 0    
+#CheckBox2 0    
+#CheckBox3 1    
+
+#RingCtrl0 0
+#RingCtrl1 0
+#RingCtrl2 1
+OPT_SSTOP 1
+#RingCtrl3 0
+
+FLAG_10 258
+#RingCtrl4 off
+RT_WINDOW_CLOSE off
+#RingCtrl5 0
+LIVE_SERVER_MAX_CONNECTIONS 0
+*SPEED 0
+TSTOP 2475
+TSTART 0
+SSTART 0
+SGUI_SSTOP 1000000000
+TSTEP 0.002
+*TSTEP_OUT 0.05
+*FREQ_MODEL 500
+*FREQ_OUT 20
+
+TSTART_WRITE = 0;
+iprint 25
+Sstop 1000000000
+
+
+ENTER_PARSFILE Vehicles\Assembly\Vehicle150.par`01-07-2023`14:40:04
+#FullDataName Vehicle: Assembly`xe`Scooters
+#VehCode fixed_caster
+
+* Front components
+iaxle 1
+
+ENTER_PARSFILE Suspensions\Fork\Fork113.par`10-13-2008`13:48:05
+#FullDataName Suspension: Fork`Scooter, Small Fork`Scooters
+#CheckBox0 0    
+#CheckBox1 0    
+#CheckBox2 1    
+#CheckBox3 1    
+
+MFORK 7.25
+LZ_CG_FORK 406.004
+X_CG_FORK -5.12484
+*KSPRING 8
+*FRICTION 0
+*BETA 2
+*DAMPING 1.2
+*LEVER 1
+*X_LENGTH 410
+*Y_LENGTH 241
+*Z_LENGTH 750
+*KCOMP 278
+*BCOMP 1
+
+flag_old_fork_data 0
+
+* Bike front fork animation information
+add_reference_frame Bike upper fork 
+set_euler_angles yaw_pitch_roll
+set_x_name X_FORK
+set_y_name Y_FORK
+set_z_name Z_FORK
+set_yaw_name Yaw_Frk
+set_pitch_name Pitch_Fr
+set_roll_name Roll_Frk
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+X_LENGTH 410
+Y_LENGTH 241
+Z_LENGTH 750
+add_reference_frame Bike lower fork 
+set_euler_angles yaw_pitch_roll
+set_x_name X_WC1
+set_y_name Y_WC1
+set_z_name Z_WC1
+set_yaw_name Yaw_Frk
+set_pitch_name Pitch_Fr
+set_roll_name Roll_Frk
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Animator\Assemblies\ShpGrp224.par`10-13-2008`13:48:57
+#FullDataName Animator: Shape Assembly`Small Scooter Lower Fork (Red)`Scooter, Small
+*COLOR 0 .2 .5
+*SCALE_X .99
+*SCALE_Y .99
+*SCALE_Z .99
+*X_REF_LENGTH 410
+*Y_REF_LENGTH 241
+*Z_REF_LENGTH 750
+
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+
+#RingCtrl0 3
+#RingCtrl1 2
+#RingCtrl2 2
+
+ENTER_PARSFILE Animator\Shape_links\Shape306.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Fork`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\fork.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_X 0
+SET_OFFSET_Y 0
+*SPECULAR 0.5
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.5 0.5 0.5
+
+
+ENTER_PARSFILE Animator\Cameras\Camera102.par`10-13-2008`13:49:12
+#FullDataName Animator: Camera Setup`Shape Preview (Top)`Shape Preview
+#RingCtrl1 0
+
+#CheckBox0 1    
+#CheckBox1 0    
+
+GHOST_COUNT 0
+ADD_GRID
+SET_CAMERA_Reference_Frame Yaw for Shape Preview
+
+ENTER_PARSFILE Animator\Frames\Frame103.par`10-13-2008`13:49:08
+#FullDataName Animator: Reference Frame`Yaw for Shape Preview`Shape Preview
+ADD_REFERENCE_FRAME Yaw for Shape Preview
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_YAW_NAME Yaw
+
+WRT_Yaw
+ANI_Yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shape Preview } Yaw for Shape Preview
+#Library : Animator: Reference Frame
+#DataSet : Yaw for Shape Preview
+#Category: Shape Preview
+#FileID  : Frame103
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:08
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame103.par
+
+#BlueLink0 Animator: Reference Frame`Yaw for Shape Preview` Shape Preview` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Yaw for Shape Preview
+SET_FOV 3.5
+*SET_FOV 3.5
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 180
+SET_ELEVATION 90
+SET_DISTANCE 35
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Top)
+#Library : Animator: Camera Setup
+#DataSet : Shape Preview (Top)
+#Category: Shape Preview
+#FileID  : Camera102
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:12
+#VehCode Camera
+
+EXIT_PARSFILE Animator\Cameras\Camera102.par
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Fork
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Fork
+#Category: Scooter, Small
+#FileID  : Shape306
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape306.par
+
+#BlueLink0 Animator: Shape File Link`Small Scooter Fork` Scooter, Small` , STL File
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape307.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Fender (Red)`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\fender.obj
+#ENDMYellow
+
+SET_COLOR 0.8 0 0
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_X 0
+SET_OFFSET_Y 0
+*SPECULAR 0.5
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.5 0.5 0.5
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Fender (Red)
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Fender (Red)
+#Category: Scooter, Small
+#FileID  : Shape307
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape307.par
+
+#BlueLink1 Animator: Shape File Link`Small Scooter Fender (Red)` Scooter, Small` , STL File
+
+x_ref_length 410
+y_ref_length 241
+z_ref_length 750
+
+
+ENTER_PARSFILE Animator\Cameras\Camera103.par`10-13-2008`13:49:12
+#FullDataName Animator: Camera Setup`Shape Preview (Side)`Shape Preview
+#RingCtrl1 0
+
+#CheckBox0 1    
+#CheckBox1 0    
+
+GHOST_COUNT 0
+ADD_GRID
+SET_CAMERA_Reference_Frame Yaw for Shape Preview
+#BlueLink0 Animator: Reference Frame`Yaw for Shape Preview` Shape Preview` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Yaw for Shape Preview
+SET_FOV 3.5
+*SET_FOV 3.5
+SET_LOOKPOINT_X 0
+SET_LOOKPOINT_Y 0
+SET_LOOKPOINT_Z 0
+SET_AZIMUTH 0
+SET_ELEVATION 0
+SET_DISTANCE 35
+GHOST_COUNT 0
+FOG_SCALE 0
+SET_FIELD_OF_VIEW 21.1
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Shape Preview } Shape Preview (Side)
+#Library : Animator: Camera Setup
+#DataSet : Shape Preview (Side)
+#Category: Shape Preview
+#FileID  : Camera103
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:12
+#VehCode Camera
+
+EXIT_PARSFILE Animator\Cameras\Camera103.par
+
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Scooter, Small } Small Scooter Lower Fork (Red)
+#Library : Animator: Shape Assembly
+#DataSet : Small Scooter Lower Fork (Red)
+#Category: Scooter, Small
+#FileID  : ShpGrp224
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:57
+#VehCode Shape Group
+
+EXIT_PARSFILE Animator\Assemblies\ShpGrp224.par
+
+#BlueLink3 Animator: Shape Assembly`Small Scooter Lower Fork (Red)` Scooter, Small` ,  Animator for lower part
+
+X_LENGTH 410
+Y_LENGTH 241
+Z_LENGTH 750
+
+R_LEVER_CONSTANT 1
+
+ENTER_PARSFILE Suspensions\Shocks\Shock107.par`10-13-2008`13:48:06
+#FullDataName Suspension: Shock Absorber`Ave. 1.6 N-s/mm`
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+FD_TABLE LINEAR
+-1410, -2237.975
+-720, -1535.48
+-390, -1038.549
+-210, -800.809
+-90, -450.455
+-20, -101.889
+20, 101.889
+90, 266.341
+200, 350.354
+390, 491.568
+760, 802.597
+1160, 1144.013
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Shock Absorber; Ave. 1.6 N-s/mm
+#Library : Suspension: Shock Absorber
+#DataSet : Ave. 1.6 N-s/mm
+#Category: 
+#FileID  : Shock107
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Shock absorber
+
+EXIT_PARSFILE Suspensions\Shocks\Shock107.par
+
+#BlueLink1 Suspension: Shock Absorber`Ave. 1.6 N-s/mm` ` , Shock absorber
+
+
+ENTER_PARSFILE Suspensions\Springs\Spring110.par`10-13-2008`13:48:06
+#FullDataName Suspension: Spring`8 N/mm, Strk. 100 mm, Preload 360 N`With Preload
+#RingCtrl0 LINEAR
+#DiagramOne0
+FS_COMP_TABLE LINEAR
+-60, -695.934
+-50, -29.309
+0, 370.666
+48, 754.642
+54, 850.636
+60, 1479.3967
+ENDTABLE
+#DiagramOne1
+FS_EXT_TABLE LINEAR
+-60, -717.266
+-50, -50.641
+0, 349.334
+48, 733.31
+54, 829.304
+60, 1458.0647
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+
+
+LOG_ENTRY Used Dataset: Suspension: Spring; { With Preload } 8 N/mm, Strk. 100 mm, Preload 360 N
+#Library : Suspension: Spring
+#DataSet : 8 N/mm, Strk. 100 mm, Preload 360 N
+#Category: With Preload
+#FileID  : Spring110
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Spring Alone
+
+EXIT_PARSFILE Suspensions\Springs\Spring110.par
+
+#BlueLink0 Suspension: Spring`8 N/mm, Strk. 100 mm, Preload 360 N` With Preload` , Spring
+
+
+ENTER_PARSFILE Suspensions\Dive\Dive101.par`10-13-2008`13:48:06
+#FullDataName Suspension: Dive Angle (Caster Change)`No Caster Change`
+#RingCtrl0 CONSTANT
+*SCALAR 0
+
+SUSP_DIVE_CONSTANT 0
+#RadioCtrl0 0    
+
+SUSP_DIVE_AXLE_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Suspension: Dive Angle (Caster Change); No Caster Change
+#Library : Suspension: Dive Angle (Caster Change)
+#DataSet : No Caster Change
+#Category: 
+#FileID  : Dive101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Dive table
+
+EXIT_PARSFILE Suspensions\Dive\Dive101.par
+
+#BlueLink5 Suspension: Dive Angle (Caster Change)`No Caster Change` ` , Wheel dive
+
+
+ENTER_PARSFILE Suspensions\Longitudinal\SusX101.par`10-13-2008`13:48:06
+#FullDataName Suspension: Longitudinal Position`Telescopic Fork (No movement)`
+#RingCtrl0 CONSTANT
+*SCALAR 0
+
+SUSP_X_CONSTANT 0
+#RadioCtrl0 0    
+
+SUSP_X_AXLE_CONSTANT 0
+
+LOG_ENTRY Used Dataset: Suspension: Longitudinal Position; Telescopic Fork (No movement)
+#Library : Suspension: Longitudinal Position
+#DataSet : Telescopic Fork (No movement)
+#Category: 
+#FileID  : SusX101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Longitudinal Movement
+
+EXIT_PARSFILE Suspensions\Longitudinal\SusX101.par
+
+#BlueLink6 Suspension: Longitudinal Position`Telescopic Fork (No movement)` ` , Wheel X
+
+
+F_AXLE_X_COEFFICIENT 278
+
+F_AXLE_VX_COEFFICIENT 1
+M_FORK 7.25
+
+LOG_ENTRY Used Dataset: Suspension: Fork; { Scooters } Scooter, Small Fork
+#Library : Suspension: Fork
+#DataSet : Scooter, Small Fork
+#Category: Scooters
+#FileID  : Fork113
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:05
+#VehCode Fork
+
+EXIT_PARSFILE Suspensions\Fork\Fork113.par
+
+#BlueLink9 Suspension: Fork`Scooter, Small Fork` Scooters` , Front suspension
+
+
+* Front tire
+add_reference_frame Wheel 1
+set_euler_angles yaw_roll_pitch
+set_x_name X_WC1
+set_y_name Y_WC1
+set_z_name Z_WC1
+set_yaw_name YAW_W1
+set_pitch_name ROT_W1
+set_roll_name ROLL_W1
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Tires\Tire\Tire120.par`10-13-2008`13:48:03
+#FullDataName Tire`Scooter, Small (Front Tire)`Scooters
+#CheckBox0 1    
+
+#RingCtrl0 1
+X_LENGTH 201
+Z_LENGTH 201
+Y_LENGTH 150
+OPT_TIRE_MODEL 1
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape308.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Front Wheel`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\front_wheel.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+X_REF_LENGTH 201
+Y_REF_LENGTH 150
+Z_REF_LENGTH 201
+*SPECULAR 0.3
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.3 0.3 0.3
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Front Wheel
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Front Wheel
+#Category: Scooter, Small
+#FileID  : Shape308
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape308.par
+
+#BlueLink0 Animator: Shape File Link`Small Scooter Front Wheel` Scooter, Small` , Animator
+
+WRITE_WHEEL_OFFSET
+SET_NUM_POINTS 12
+SET_THICKNESS_SGUI 150
+RRE 201
+KT 130
+FZ_MAX 7000
+MWHL 0
+M_WHL 0
+RAD_TC 50
+IYY_WHL 0.484
+L_RELAX_X 25
+L_RELAX_Y 200
+VLOW_ALPHA 5
+RR_C 0.002
+RR_V 0.000015
+
+ENTER_PARSFILE Generic\External\External101.par`10-13-2008`13:48:46
+#FullDataName External PARSFILE`Example Front Tire (V. 1.02)`
+#VehCode External file
+#MiscYellow0
+
+ENTER_PARSFILE Generic\Example_Front_v102.par`01-15-2008`13:19:54
+BEGIN_PAC_BIKE_DATA
+P_BIKE_FZ0           1100.0
+P_BIKE_PCX1          1.6064
+P_BIKE_PDX1          1.3806
+P_BIKE_PDX2          -0.041429
+P_BIKE_PEX1          0.0263
+P_BIKE_PEX2          0.27056
+P_BIKE_PEX3          -0.076882
+P_BIKE_PKX1          25.939
+P_BIKE_PKX2          -4.2327
+P_BIKE_PKX3          0.33686
+P_BIKE_RBX1          13.476
+P_BIKE_RBX2          11.354
+P_BIKE_RCX1          1.1231
+P_BIKE_PCY1          0.83266
+P_BIKE_PCY2          0.86765
+P_BIKE_PDY1          1.3
+P_BIKE_PDY2          0.0
+P_BIKE_PDY3          0.0
+P_BIKE_PEY1          -1.2556
+P_BIKE_PEY2          -3.2068
+P_BIKE_PEY4          -3.9975
+P_BIKE_PEY5          -15.815
+P_BIKE_PKY1          -22.841
+P_BIKE_PKY2          2.1578
+P_BIKE_PKY3          2.5058
+P_BIKE_PKY4          -0.08088
+P_BIKE_PKY5          -0.22882
+P_BIKE_PKY6          -0.69677
+P_BIKE_PKY7          0.03077
+P_BIKE_RBY1          7.7856
+P_BIKE_RBY2          8.1697
+P_BIKE_RBY3          -0.059138
+P_BIKE_RCY1          1.0533
+P_BIKE_QBZ1          10.486
+P_BIKE_QBZ2          -0.0011536
+P_BIKE_QBZ5          -0.68973
+P_BIKE_QBZ6          1.0411
+P_BIKE_QBZ9          27.445
+P_BIKE_QBZ10          1.0792
+P_BIKE_QCZ1          1.0917
+P_BIKE_QDZ1          0.19796
+P_BIKE_QDZ2          0.065629
+P_BIKE_QDZ3          0.2199
+P_BIKE_QDZ4          0.21866
+P_BIKE_QDZ8          -0.3682
+P_BIKE_QDZ9          -0.1218
+P_BIKE_QDZ10         -0.25439
+P_BIKE_QDZ11          0.17873
+P_BIKE_QEZ1          -0.91586
+P_BIKE_QEZ2          0.11625
+P_BIKE_QEZ5          -1.4387
+P_BIKE_QHZ1          -0.0075232
+P_BIKE_QHZ2          0.002695
+P_BIKE_QHZ3          0.0037886
+P_BIKE_QHZ4          0.01557
+P_BIKE_MU_REF_X      1.0
+P_BIKE_MU_REF_Y      1.0
+END_PAC_BIKE_DATA
+EXIT_PARSFILE Generic\Example_Front_v102.par
+
+#ENDMYellow
+
+#RingCtrl0 0
+
+LOG_ENTRY Used Dataset: External PARSFILE; Example Front Tire (V. 1.02)
+#Library : External PARSFILE
+#DataSet : Example Front Tire (V. 1.02)
+#Category: 
+#FileID  : External101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:46
+#VehCode External file
+
+EXIT_PARSFILE Generic\External\External101.par
+
+#BlueLink1 External PARSFILE`Example Front Tire (V. 1.02)` ` , External data
+
+
+
+LOG_ENTRY Used Dataset: Tire; { Scooters } Scooter, Small (Front Tire)
+#Library : Tire
+#DataSet : Scooter, Small (Front Tire)
+#Category: Scooters
+#FileID  : Tire120
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:03
+#VehCode 
+
+EXIT_PARSFILE Tires\Tire\Tire120.par
+
+#BlueLink10 Tire`Scooter, Small (Front Tire)` Scooters` , Front tire
+
+* Rear components
+iaxle 2
+
+ENTER_PARSFILE Suspensions\Swing_Arm\SwArm109.par`10-13-2008`13:48:04
+#FullDataName Suspension: Swing Arm`Scooter, Small`Scooters
+#RingCtrl0 0
+#CheckBox0 0    
+#CheckBox1 1    
+#CheckBox2 0    
+
+* Bike swing arm animation information
+add_reference_frame Bike swing arm 
+set_euler_angles yaw_pitch_roll
+set_x_name X_WC2
+set_y_name Y_WC2
+set_z_name Z_WC2
+set_yaw_name Yaw_hub
+set_pitch_name Pitch_hb
+set_roll_name Roll_hub
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Animator\Shape_links\Shape309.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Swing Arm`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\swing_arm.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 1.186
+SET_OFFSET_Y 0
+SET_OFFSET_Z -0.268
+X_REF_LENGTH 313
+Y_REF_LENGTH 67
+Z_REF_LENGTH 170
+*SPECULAR 0.3
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.3 0.3 0.3
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Swing Arm
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Swing Arm
+#Category: Scooter, Small
+#FileID  : Shape309
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape309.par
+
+#BlueLink2 Animator: Shape File Link`Small Scooter Swing Arm` Scooter, Small` , Animator
+
+MSA 8
+Z_CG_SA 10.7384
+X_CG_SA 258.02
+Y_CG_SA 0
+*KSPRING 20
+*FRICTION 0
+*BETA 2
+*DAMPING 4
+*LEVER 0.852
+X_LENGTH 313
+Y_LENGTH 67
+Z_LENGTH 170
+H_SAP 268
+*LXSA 301.72
+*HWC 196
+
+flag_old_swing_arm_data 0
+
+
+ENTER_PARSFILE Suspensions\LeverRr\LeverRr107.par`10-13-2008`13:48:05
+#FullDataName Suspension: Lever Ratio`Initial lever ratio = 0.852 (Scooter, Small)`
+#RingCtrl0 LINEAR_FLAT
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+R_LEVER_TABLE LINEAR_FLAT
+-10, 0.85141
+0, 0.852
+10, 0.85339
+20, 0.85554
+30, 0.85841
+40, 0.86195
+50, 0.86613
+60, 0.87089
+70, 0.8762
+80, 0.88202
+90, 0.8883
+100, 0.895
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Suspension: Lever Ratio; Initial lever ratio = 0.852 (Scooter, Small)
+#Library : Suspension: Lever Ratio
+#DataSet : Initial lever ratio = 0.852 (Scooter, Small)
+#Category: 
+#FileID  : LeverRr107
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:05
+#VehCode Lever ratio
+
+EXIT_PARSFILE Suspensions\LeverRr\LeverRr107.par
+
+#BlueLink3 Suspension: Lever Ratio`Initial lever ratio = 0.852 (Scooter, Small)` ` , Lever ratio
+
+
+FD_COEFFICIENT 4
+
+ENTER_PARSFILE Suspensions\Springs\Spring103.par`10-13-2008`13:48:06
+#FullDataName Suspension: Spring`20 N/mm, Strk. 200 mm, Preload 690 N`With Preload
+#RingCtrl0 LINEAR
+#DiagramOne0
+FS_COMP_TABLE LINEAR
+-110, -3297.5
+-100, -1297.5
+0, 702.5
+98, 2662.5
+104, 3202.5
+110, 5702.5
+ENDTABLE
+#DiagramOne1
+FS_EXT_TABLE LINEAR
+-110, -3322.5
+-100, -1322.5
+0, 677.5
+98, 2637.5
+104, 3177.5
+110, 5677.5
+ENDTABLE
+#RadioCtrl0 0    
+#RadioCtrl1 0    
+
+SPRING_COMP_BETA 2
+SPRING_EXT_BETA 2
+
+
+LOG_ENTRY Used Dataset: Suspension: Spring; { With Preload } 20 N/mm, Strk. 200 mm, Preload 690 N
+#Library : Suspension: Spring
+#DataSet : 20 N/mm, Strk. 200 mm, Preload 690 N
+#Category: With Preload
+#FileID  : Spring103
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Spring Alone
+
+EXIT_PARSFILE Suspensions\Springs\Spring103.par
+
+#BlueLink0 Suspension: Spring`20 N/mm, Strk. 200 mm, Preload 690 N` With Preload` , Spring
+
+
+SUSP_X_TABLE
+-171.494118, 114.830468
+-136.855500, 75.255004
+-95.870914, 42.295714
+-49.785655, 16.954048
+-0.000000, -0.000000
+51.973338, -8.051290
+104.555176, -6.955187
+156.147842, 3.255004
+205.183718, 22.269052
+ENDTABLE
+
+SUSP_DIVE_TABLE
+-171.494118, -53.805805
+-136.855500, -43.805805
+-95.870914, -33.805805
+-49.785655, -23.805805
+-0.000000, -13.805805
+51.973338, -3.805805
+104.555176, 6.194195
+156.147842, 16.194195
+205.183718, 26.194195
+ENDTABLE
+M_HUB 8
+X_CG_HUB 258.02
+Y_CG_HUB 0
+Z_CG_HUB 10.7384
+
+LOG_ENTRY Used Dataset: Suspension: Swing Arm; { Scooters } Scooter, Small
+#Library : Suspension: Swing Arm
+#DataSet : Scooter, Small
+#Category: Scooters
+#FileID  : SwArm109
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:04
+#VehCode Swing Arm
+
+EXIT_PARSFILE Suspensions\Swing_Arm\SwArm109.par
+
+#BlueLink11 Suspension: Swing Arm`Scooter, Small` Scooters` , Rear  suspension
+
+
+* Rear tire
+add_reference_frame Wheel 2
+set_euler_angles yaw_roll_pitch
+set_x_name X_WC2
+set_y_name Y_WC2
+set_z_name Z_WC2
+set_yaw_name YAW_W2
+set_pitch_name ROT_W2
+set_roll_name ROLL_W2
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Tires\Tire\Tire121.par`10-13-2008`13:48:03
+#FullDataName Tire`Scooter, Small (Rear Tire)`Scooters
+#CheckBox0 1    
+
+#RingCtrl0 1
+X_LENGTH 196
+Z_LENGTH 196
+Y_LENGTH 210
+OPT_TIRE_MODEL 1
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape310.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Rear Wheel`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\rear_wheel.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_Y 0
+X_REF_LENGTH 196
+Y_REF_LENGTH 210
+Z_REF_LENGTH 196
+*SPECULAR 0.3
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.3 0.3 0.3
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Rear Wheel
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Rear Wheel
+#Category: Scooter, Small
+#FileID  : Shape310
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape310.par
+
+#BlueLink0 Animator: Shape File Link`Small Scooter Rear Wheel` Scooter, Small` , Animator
+
+WRITE_WHEEL_OFFSET
+SET_NUM_POINTS 12
+SET_THICKNESS_SGUI 210
+RRE 196
+KT 141
+FZ_MAX 10000
+MWHL 4
+M_WHL 4
+RAD_TC 50
+IYY_WHL 0.638
+L_RELAX_X 25
+L_RELAX_Y 200
+VLOW_ALPHA 5
+RR_C 0.004
+RR_V 0.000025
+
+ENTER_PARSFILE Generic\External\External102.par`10-13-2008`13:48:46
+#FullDataName External PARSFILE`Example Rear Tire (V. 1.02)`
+#VehCode External file
+#MiscYellow0
+
+ENTER_PARSFILE Generic\Example_Rear_v102.par`01-15-2008`13:19:54
+BEGIN_PAC_BIKE_DATA
+P_BIKE_FZ0           1600.0
+P_BIKE_PCX1          1.6064
+P_BIKE_PDX1          1.3548
+P_BIKE_PDX2          -0.060295
+P_BIKE_PEX1          0.0263
+P_BIKE_PEX2          0.27056
+P_BIKE_PEX3          -0.076882
+P_BIKE_PKX1          25.939
+P_BIKE_PKX2          -4.2327
+P_BIKE_PKX3          0.33686
+P_BIKE_RBX1          13.476
+P_BIKE_RBX2          11.354
+P_BIKE_RCX1          1.1231
+P_BIKE_PCY1          0.9
+P_BIKE_PCY2          0.61397
+P_BIKE_PDY1          1.3
+P_BIKE_PDY2          0.0
+P_BIKE_PDY3          0.0
+P_BIKE_PEY1          -2.2227
+P_BIKE_PEY2          -1.669
+P_BIKE_PEY4          -4.288
+P_BIKE_PEY5          -19.99
+P_BIKE_PKY1          -15.791
+P_BIKE_PKY2          1.6935
+P_BIKE_PKY3          1.4604
+P_BIKE_PKY4          0.669
+P_BIKE_PKY5          0.18708
+P_BIKE_PKY6          -0.45512
+P_BIKE_PKY7          -0.013293
+P_BIKE_RBY1          7.7856
+P_BIKE_RBY2          8.1697
+P_BIKE_RBY3          -0.059138
+P_BIKE_RCY1          1.0533
+P_BIKE_QBZ1          10.041
+P_BIKE_QBZ2          -1.6e-8
+P_BIKE_QBZ5          -0.76784
+P_BIKE_QBZ6          0.73422
+P_BIKE_QBZ9          16.39
+P_BIKE_QBZ10          0.35549
+P_BIKE_QCZ1          1.3153
+P_BIKE_QDZ1          0.26331
+P_BIKE_QDZ2          0.030987
+P_BIKE_QDZ3          -0.62013
+P_BIKE_QDZ4          0.98524
+P_BIKE_QDZ8          -0.50453
+P_BIKE_QDZ9          -0.36312
+P_BIKE_QDZ10          0.19167
+P_BIKE_QDZ11          0.40709
+P_BIKE_QEZ1          -0.19924
+P_BIKE_QEZ2          -0.017638
+P_BIKE_QEZ5          -3.6511
+P_BIKE_QHZ1          0.017538
+P_BIKE_QHZ2          -0.010759
+P_BIKE_QHZ3          0.028448
+P_BIKE_QHZ4          0.0098618
+P_BIKE_MU_REF_X      1.0
+P_BIKE_MU_REF_Y      1.0
+END_PAC_BIKE_DATA
+EXIT_PARSFILE Generic\Example_Rear_v102.par
+
+#ENDMYellow
+
+#RingCtrl0 0
+
+LOG_ENTRY Used Dataset: External PARSFILE; Example Rear Tire (V. 1.02)
+#Library : External PARSFILE
+#DataSet : Example Rear Tire (V. 1.02)
+#Category: 
+#FileID  : External102
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:46
+#VehCode External file
+
+EXIT_PARSFILE Generic\External\External102.par
+
+#BlueLink1 External PARSFILE`Example Rear Tire (V. 1.02)` ` , External data
+
+
+
+LOG_ENTRY Used Dataset: Tire; { Scooters } Scooter, Small (Rear Tire)
+#Library : Tire
+#DataSet : Scooter, Small (Rear Tire)
+#Category: Scooters
+#FileID  : Tire121
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:03
+#VehCode 
+
+EXIT_PARSFILE Tires\Tire\Tire121.par
+
+#BlueLink12 Tire`Scooter, Small (Rear Tire)` Scooters` , Rear tire
+
+* Sprung mass and system information
+add_reference_frame Bike frame 
+set_euler_angles yaw_pitch_roll
+set_x_name Xo
+set_y_name Yo
+set_z_name Zo
+set_yaw_name YAW
+set_pitch_name PITCH
+set_roll_name ROLL_E
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Vehicles\Sprung_Mass\SprMass113.par`01-07-2023`14:41:02
+#FullDataName Vehicle: Sprung Mass`Scooter, Small Sprung Mass`Scooters
+
+ENTER_PARSFILE Animator\Assemblies\ShpGrp228.par`01-07-2023`13:57:19
+#FullDataName Animator: Shape Assembly`Small Scooter Body (Red)`Scooter, Small
+*COLOR 0 .2 .5
+*SCALE_X .99
+*SCALE_Y .99
+*SCALE_Z .99
+*X_REF_LENGTH 1178
+*Y_REF_LENGTH 430
+*Z_REF_LENGTH 715
+
+#CheckBox0 0    
+#CheckBox2 0    
+#CheckBox3 0    
+#CheckBox4 0    
+#CheckBox5 1    
+
+#RingCtrl0 3
+#RingCtrl1 2
+#RingCtrl2 2
+
+ENTER_PARSFILE Animator\Shape_links\Shape311.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Body (Red)`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\body.obj
+#ENDMYellow
+
+SET_COLOR 0.8 0 0
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+*SPECULAR 0.5
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.5 0.5 0.5
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Body (Red)
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Body (Red)
+#Category: Scooter, Small
+#FileID  : Shape311
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape311.par
+
+#BlueLink0 Animator: Shape File Link`Small Scooter Body (Red)` Scooter, Small` , STL File
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape312.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Base`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\base.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+*SPECULAR 0.3
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.3 0.3 0.3
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Base
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Base
+#Category: Scooter, Small
+#FileID  : Shape312
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape312.par
+
+#BlueLink1 Animator: Shape File Link`Small Scooter Base` Scooter, Small` , STL File
+
+x_ref_length 1178
+y_ref_length 430
+z_ref_length 715
+
+#BlueLink17 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape Assembly; { Scooter, Small } Small Scooter Body (Red)
+#Library : Animator: Shape Assembly
+#DataSet : Small Scooter Body (Red)
+#Category: Scooter, Small
+#FileID  : ShpGrp228
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-07-2023 13:57:19
+#VehCode Shape Group
+
+EXIT_PARSFILE Animator\Assemblies\ShpGrp228.par
+
+#BlueLink0 Animator: Shape Assembly`Small Scooter Body (Red)` Scooter, Small` , Animator
+
+H_CG_MAIN 400
+L_WB 1178
+LX_CG_MAIN 400
+MMAIN 75
+IXX_MAIN 11
+IYY_MAIN 22
+IZZ_MAIN 14
+IXZ_MAIN -3
+RX_SGUI 0.2708
+RY_SGUI 0.3830
+RZ_SGUI 0.3055
+LY_CG_MAIN 0
+Z_LENGTH 715
+Y_LENGTH 430
+*HWC_F 201
+*HWC_R 196
+A_FALL_STOP 75
+K_FALL_STOP 5000
+
+#CheckBox0 0    
+
+X_LENGTH 1178
+LX_AXLE 1178
+M_MAIN 75
+iaxle 1
+H_WC 201
+iaxle 2
+H_WC 196
+
+LOG_ENTRY Used Dataset: Vehicle: Sprung Mass; { Scooters } Scooter, Small Sprung Mass
+#Library : Vehicle: Sprung Mass
+#DataSet : Scooter, Small Sprung Mass
+#Category: Scooters
+#FileID  : SprMass113
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-07-2023 14:41:02
+#VehCode Sprung mass
+
+EXIT_PARSFILE Vehicles\Sprung_Mass\SprMass113.par
+
+#BlueLink0 Vehicle: Sprung Mass`Scooter, Small Sprung Mass` Scooters` , Sprung mass
+
+
+ENTER_PARSFILE Brakes\System\BrkSys101.par`10-13-2008`13:48:53
+#FullDataName Brake System`Example Brakes`
+A_MC(1) 198.5
+A_MC(2) 198.5
+A_SC(1) 2050
+A_SC(2) 2300
+MU_BK(1) 0.4
+MU_BK(2) 0.4
+RAD_D(1) 148
+RAD_D(2) 98
+R_BK(1) 6
+R_BK(2) 3
+TC_BK(1) 0.061
+TC_BK(2) 0.061
+
+AREA_MC(1) 198.5
+AREA_MC(2) 198.5
+AREA_WC(1) 2050
+AREA_WC(2) 2300
+iaxle 1
+
+ENTER_PARSFILE Brakes\Proportioning\BrkProp101.par`10-13-2008`13:48:53
+#FullDataName Brakes: Proportioning / Limiting Valve`Unity Gain`
+#RingCtrl0 CARPET
+#RadioCtrl0 0    
+
+
+*3D_XLabel Dynamic wheel load (N)
+*3D_YLabel Control pressure (MPa)
+*3D_ZLabel Delivery pressure to ABS (MPa)
+
+#DiagramTwo0
+*3D_DATA 3, 2 ! columns x rows
+PBK_DL_CARPET
+0, 25000, 50000, 75000
+0, 0, 0, 0
+1, 1, 1, 1
+ENDTABLE
+
+
+LOG_ENTRY Used Dataset: Brakes: Proportioning / Limiting Valve; Unity Gain
+#Library : Brakes: Proportioning / Limiting Valve
+#DataSet : Unity Gain
+#Category: 
+#FileID  : BrkProp101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:53
+#VehCode Prop. / limit. valve
+
+EXIT_PARSFILE Brakes\Proportioning\BrkProp101.par
+
+#BlueLink0 Brakes: Proportioning / Limiting Valve`Unity Gain` ` , Front
+
+iaxle 2
+#BlueLink1 Brakes: Proportioning / Limiting Valve`Unity Gain` ` , Rear
+
+
+LOG_ENTRY Used Dataset: Brake System; Example Brakes
+#Library : Brake System
+#DataSet : Example Brakes
+#Category: 
+#FileID  : BrkSys101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:53
+#VehCode Brake system
+
+EXIT_PARSFILE Brakes\System\BrkSys101.par
+
+#BlueLink6 Brake System`Example Brakes` ` , Brake system
+
+
+ENTER_PARSFILE Steering\SYstem\StrSys108.par`10-13-2008`13:48:06
+#FullDataName Steering System`Scooter, Small Steering`Scooters
+M_STR_MAX 200
+A_STEER 24.7
+BSTR 0.2
+BTWST 1.7452
+KTWST 1745.2
+MSTR 9.99
+Z_CG_STR 54.1281
+LZ_FORK 746.979
+X_CG_STR -0.420205
+X_FORK -5.65547
+IXX_STR 1.341
+IYY_STR 1.584
+IZZ_STR 0.4125
+IXZ_STR 0
+RX_SGUI 0.3664
+RY_SGUI 0.3982
+RZ_SGUI 0.2032
+DGC -15
+DGS 0.6
+IGC -250
+IGS 1.875
+PGC -140
+PGS -0.6875
+PGD 0
+*X_LENGTH 254
+*Y_LENGTH 492
+*Z_LENGTH 470
+X_GRIP -22.2784
+Z_GRIP 52.074
+
+flag_old_steer_data 0
+
+* Bike steering head information
+add_reference_frame Bike steer 
+set_euler_angles yaw_pitch_roll
+set_x_name X_STR
+set_y_name Y_STR
+set_z_name Z_STR
+set_yaw_name Yaw_Str
+set_pitch_name Pitch_St
+set_roll_name Roll_Str
+set_scale_var_pitch 1
+set_scale_var_yaw 1
+set_scale_var_roll 1
+x_ref_length 1
+y_ref_length 1
+z_ref_length 1
+x_length 1
+y_length 1
+z_length 1
+
+ENTER_PARSFILE Steering\Stiffness\StrStiff101.par`10-13-2008`13:48:07
+#FullDataName Steering Stiffness`Example Steer Stiffness (60 deg. Clearance)`
+#RingCtrl0 LINEAR
+#RadioCtrl0 0    
+
+
+#DiagramOne0
+MZ_STR_TABLE LINEAR
+-31, -100
+-30, 0
+30, 0
+31, 100
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Steering Stiffness; Example Steer Stiffness (60 deg. Clearance)
+#Library : Steering Stiffness
+#DataSet : Example Steer Stiffness (60 deg. Clearance)
+#Category: 
+#FileID  : StrStiff101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:07
+#VehCode Steering Stiffness
+
+EXIT_PARSFILE Steering\Stiffness\StrStiff101.par
+
+#BlueLink0 Steering Stiffness`Example Steer Stiffness (60 deg. Clearance)` ` , Spring
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape318.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Small Scooter Handle Bars (no arms)`Scooter, Small
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\Small Scooter\handlebars_no_arms.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 1
+SET_SCALE_Y 1
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 24.79
+SET_ANGLE_X 0
+SET_OFFSET_Y 0
+X_REF_LENGTH 254
+Y_REF_LENGTH 492
+Z_REF_LENGTH 470
+*SPECULAR 0.4
+
+#RingCtrl0 1
+#CheckBox0 0    
+set_lighting on
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR 0.4 0.4 0.4
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Scooter, Small } Small Scooter Handle Bars (no arms)
+#Library : Animator: Shape File Link
+#DataSet : Small Scooter Handle Bars (no arms)
+#Category: Scooter, Small
+#FileID  : Shape318
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape318.par
+
+#BlueLink1 Animator: Shape File Link`Small Scooter Handle Bars (no arms)` Scooter, Small` , Animator
+
+X_LENGTH 254
+Y_LENGTH 492
+LY_GRIP 492
+Z_LENGTH 470
+D_STR 0.2
+D_FRAME_TWIST 1.7452
+K_FRAME_TWIST 1745.2
+M_STR 9.99
+SC_DG -15
+SC_DG_SD 0.6
+SC_IG -250
+SC_IG_SD 1.875
+SC_PG -140
+SC_PG_SD -0.6875
+SC_PG_SD2 0
+#CheckBox0 0    
+
+
+LOG_ENTRY Used Dataset: Steering System; { Scooters } Scooter, Small Steering
+#Library : Steering System
+#DataSet : Scooter, Small Steering
+#Category: Scooters
+#FileID  : StrSys108
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:06
+#VehCode Steering System
+
+EXIT_PARSFILE Steering\SYstem\StrSys108.par
+
+#BlueLink7 Steering System`Scooter, Small Steering` Scooters` , Steering System
+
+
+ENTER_PARSFILE Animator\Groups\Group130.par`10-13-2008`13:49:10
+#FullDataName Animator: Group`Scooter, Big: Shadow`Shadows
+
+ENTER_PARSFILE Animator\Frames\Frame172.par`10-13-2008`13:49:07
+#FullDataName Animator: Reference Frame`Scooter, Big: Shadow (Middle)`Shadows
+ADD_REFERENCE_FRAME Scooter, Big: Shadow (Middle)
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_1
+SET_Y_NAME Yctc_1
+SET_Z_NAME Zgnd_1
+SET_ROLL_NAME rollg1
+SET_PITCH_NAME pitchg1
+SET_YAW_NAME yaw
+SET_OFFSET_VAR_Z .016
+
+#MiscYellow0
+x_length 1576
+y_length 637
+z_length 1318
+#ENDMYellow
+
+WRT_Xctc_1
+ANI_Xctc_1
+WRT_Yctc_1
+ANI_Yctc_1
+WRT_Zgnd_1
+ANI_Zgnd_1
+WRT_rollg1
+ANI_rollg1
+WRT_pitchg1
+ANI_pitchg1
+WRT_yaw
+ANI_yaw
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shadows } Scooter, Big: Shadow (Middle)
+#Library : Animator: Reference Frame
+#DataSet : Scooter, Big: Shadow (Middle)
+#Category: Shadows
+#FileID  : Frame172
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:07
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame172.par
+
+#BlueLink0 Animator: Reference Frame`Scooter, Big: Shadow (Middle)` Shadows` , Animator data
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape115.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Shadow`Shadows
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\shadow\shadow.obj
+#ENDMYellow
+
+SET_COLOR .02 .02 .02
+X_REF_LENGTH 1300
+Y_REF_LENGTH 1000
+Z_REF_LENGTH 1
+*SPECULAR .5
+*TRANSPARENCY 0.35
+SMOOTH_MAX_ANGLE 30
+
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 1    
+set_fogging off
+#CheckBox2 1    
+mtl_ns_old on
+
+set_transparency 0.35
+show_front on
+show_back off
+SET_SPECULAR .5 .5 .5
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Shadows } Shadow
+#Library : Animator: Shape File Link
+#DataSet : Shadow
+#Category: Shadows
+#FileID  : Shape115
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape115.par
+
+#BlueLink1 Animator: Shape File Link`Shadow` Shadows` , Animator data
+
+
+ENTER_PARSFILE Animator\Frames\Frame173.par`10-13-2008`13:49:07
+#FullDataName Animator: Reference Frame`Scooter, Big: Shadow (Side)`Shadows
+ADD_REFERENCE_FRAME Scooter, Big: Shadow (Side)
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME Xctc_1
+SET_Y_NAME Yctc_1
+SET_Z_NAME Zgnd_1
+SET_ROLL_NAME rollg1
+SET_PITCH_NAME pitchg1
+SET_YAW_NAME yaw
+SET_OFFSET_VAR_Z .013
+SET_FRAME_SCALE_Y_NAME roll_e
+
+#MiscYellow0
+x_length 1576
+y_length 637
+z_length 1318
+#ENDMYellow
+
+WRT_Xctc_1
+ANI_Xctc_1
+WRT_Yctc_1
+ANI_Yctc_1
+WRT_Zgnd_1
+ANI_Zgnd_1
+WRT_rollg1
+ANI_rollg1
+WRT_pitchg1
+ANI_pitchg1
+WRT_yaw
+ANI_yaw
+WRT_roll_e
+ANI_roll_e
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Shadows } Scooter, Big: Shadow (Side)
+#Library : Animator: Reference Frame
+#DataSet : Scooter, Big: Shadow (Side)
+#Category: Shadows
+#FileID  : Frame173
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:07
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame173.par
+
+#BlueLink3 Animator: Reference Frame`Scooter, Big: Shadow (Side)` Shadows` , Animator data
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape116.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Shadow (Side)`Shadows
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\vehicles\shadow\half_shadow.obj
+#ENDMYellow
+
+SET_COLOR .02 .02 .02
+SET_SCALE_Y -0.08
+X_REF_LENGTH 1300
+Y_REF_LENGTH 500
+Z_REF_LENGTH 1
+*SPECULAR .5
+*TRANSPARENCY 0.4
+SMOOTH_MAX_ANGLE 30
+
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 1    
+set_fogging off
+#CheckBox2 1    
+mtl_ns_old on
+
+set_transparency 0.4
+show_front on
+show_back off
+SET_SPECULAR .5 .5 .5
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Shadows } Shadow (Side)
+#Library : Animator: Shape File Link
+#DataSet : Shadow (Side)
+#Category: Shadows
+#FileID  : Shape116
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape116.par
+
+#BlueLink4 Animator: Shape File Link`Shadow (Side)` Shadows` , Animator data
+
+*X_REF_LENGTH 1
+*Y_REF_LENGTH 1
+*Z_REF_LENGTH 1
+
+#CheckBox0 0    
+
+
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Shadows } Scooter, Big: Shadow
+#Library : Animator: Group
+#DataSet : Scooter, Big: Shadow
+#Category: Shadows
+#FileID  : Group130
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:10
+#VehCode Animator Group
+
+EXIT_PARSFILE Animator\Groups\Group130.par
+
+#BlueLink2 Animator: Group`Scooter, Big: Shadow` Shadows` ,  Misc. system
+
+C_AERO_D 0.2
+C_AERO_L 0.085
+C_AERO_P 0.205
+#RingCtrl0 0
+OPT_PT 0
+#RingCtrl1 0
+R_REAR_DRIVE_SC 1
+PMAX_SC 1.2
+*IMAGE_FIT_MODE 1
+AREA_AERO 0.76
+CD 0.2
+CL 0.085
+CP 0.205
+
+*IMAGE_CAR Vehicles\Bike_Graphics\Scooter_Red.EMF
+
+LOG_ENTRY Used Dataset: Vehicle: Assembly; { Scooters } xe
+#Library : Vehicle: Assembly
+#DataSet : xe
+#Category: Scooters
+#FileID  : Vehicle150
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-07-2023 14:40:04
+#VehCode fixed_caster
+
+EXIT_PARSFILE Vehicles\Assembly\Vehicle150.par
+
+#BlueLink2 Vehicle: Assembly`xe` Scooters` , Vehicle code
+
+
+ENTER_PARSFILE Roads\3D_Road\Road118.par`01-11-2023`14:50:47
+#FullDataName Road: 3D Surface`Flat`Straight
+OPT_ROAD 1
+iroad 1
+
+RR_SURF 0.005
+
+
+ENTER_PARSFILE Roads\Center_XY\RoadXY101.par`10-13-2008`13:48:08
+#FullDataName Road: X-Y Coordinates of Centerline`Straight`
+SPATH 0
+
+#CheckBox0 0    
+OPT_ROAD_LOOP 0
+
+#RadioCtrl0 0    
+
+OPT_ROAD 1
+
+#DiagramOne0
+YIN_TABLE
+0, 0, 0
+100, 0, 100
+ENDTABLE
+
+LOG_ENTRY Used Dataset: Road: X-Y Coordinates of Centerline; Straight
+#Library : Road: X-Y Coordinates of Centerline
+#DataSet : Straight
+#Category: 
+#FileID  : RoadXY101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:08
+#VehCode Horizontal (X-Y) table
+
+EXIT_PARSFILE Roads\Center_XY\RoadXY101.par
+
+#BlueLink0 Road: X-Y Coordinates of Centerline`Straight` ` , Centerline geometry
+
+
+ENTER_PARSFILE Roads\Center_Z\RoadZ101.par`10-13-2008`13:48:23
+#FullDataName Road: Centerline Elevation`Flat`
+OPT_ROAD 1
+
+#RingCtrl0 SPLINE
+#DiagramOne0
+ROAD_ZS_TABLE SPLINE
+-100, 0
+50, 0
+100, 0
+ENDTABLE
+#RadioCtrl0 0    
+
+
+set_path_color black
+display off
+
+LOG_ENTRY Used Dataset: Road: Centerline Elevation; Flat
+#Library : Road: Centerline Elevation
+#DataSet : Flat
+#Category: 
+#FileID  : RoadZ101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:23
+#VehCode Centerline elevation: Z vs S
+
+EXIT_PARSFILE Roads\Center_Z\RoadZ101.par
+
+#BlueLink1 Road: Centerline Elevation`Flat` ` , Centerline elevation
+
+
+ENTER_PARSFILE Roads\dZ_Map\RdElMap101.par`10-13-2008`13:48:11
+#FullDataName Road: Off-Center Elevation Map`Flat`
+OPT_ROAD 1
+
+#RingCtrl0 CARPET
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Incremental elevation (m)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+ROAD_DZ_CARPET
+0, -10, 10
+0, 0, 0
+1000, 0, 0
+ENDTABLE
+
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Road: Off-Center Elevation Map; Flat
+#Library : Road: Off-Center Elevation Map
+#DataSet : Flat
+#Category: 
+#FileID  : RdElMap101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:11
+#VehCode Off-center elevation: dZ vs S, L
+
+EXIT_PARSFILE Roads\dZ_Map\RdElMap101.par
+
+#BlueLink2 Road: Off-Center Elevation Map`Flat` ` , Off-center elevation
+
+
+ENTER_PARSFILE Roads\Friction\RdFric104.par`10-13-2008`13:48:22
+#FullDataName Road: Friction Map`0.5`Constant Mu
+OPT_ROAD 1
+
+#RingCtrl0 CARPET
+*3D_XLabel Lateral coordinate (m)
+*3D_YLabel Station (m)
+*3D_ZLabel Friction coefficient (-)
+
+#DiagramTwo0
+*3D_DATA 2, 2 ! columns x rows
+MU_ROAD_CARPET
+0, 0, 1
+0, 0.5, 0.5
+1, 0.5, 0.5
+ENDTABLE
+
+#RadioCtrl0 0    
+
+
+
+LOG_ENTRY Used Dataset: Road: Friction Map; { Constant Mu } 0.5
+#Library : Road: Friction Map
+#DataSet : 0.5
+#Category: Constant Mu
+#FileID  : RdFric104
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:22
+#VehCode Friction: Mu vs S, L
+
+EXIT_PARSFILE Roads\Friction\RdFric104.par
+
+#BlueLink3 Road: Friction Map`0.5` Constant Mu` , Friction
+
+
+ENTER_PARSFILE Roads\Shapes\RdShp102.par`10-13-2008`13:48:25
+#FullDataName Road: Animator Surface Shapes`1200 m Road + 200 m light grass`Roads
+OPT_ROAD 1
+
+OPTTHRESHOLD 1
+LIN(1) -4
+LIN(2) 4
+LIN(3) -7.1
+LIN(4) 7.1
+LIN(5) -4
+LOUT(1) 4
+LOUT(2) 7.1
+LOUT(3) -100
+LOUT(4) 100
+LOUT(5) -7.1
+COLOR(1) 0.878 0.878 0.878
+COLOR(2) 0.878 0.878 0.878
+COLOR(3) 0.878 0.878 0.878
+COLOR(4) 0.878 0.878 0.878
+COLOR(5) 0.878 0.878 0.878
+SINT(1) 5
+SINT(2) 5
+SINT(3) 5
+SINT(4) 5
+SINT(5) 5
+SSTART(1) -100
+SSTART(2) -100
+SSTART(3) -100
+SSTART(4) -100
+SSTART(5) -100
+SSTOP(1) 1200
+SSTOP(2) 1200
+SSTOP(3) 1200
+SSTOP(4) 1200
+SSTOP(5) 1200
+SCALE(1) 60
+SCALE(2) 60
+SCALE(3) 60
+SCALE(4) 60
+SCALE(5) 60
+LSCALE(1) 8
+LSCALE(2) 3.1
+LSCALE(3) 30
+LSCALE(4) 30
+LSCALE(5) -3.2
+SPECULAR(2) 0
+SPECULAR(3) 0
+SPECULAR(4) 0
+SPECULAR(5) 0
+
+#RingCtrl0 5
+NLANES 5
+#RingCtrl1 road (medium)
+MATERIAL(1) road (medium)
+#RingCtrl2 road transition (light)
+MATERIAL(2) road transition (light)
+#RingCtrl3 grass (light)
+MATERIAL(3) grass (light)
+#RingCtrl4 grass (light)
+MATERIAL(4) grass (light)
+#RingCtrl5 road transition (light)
+MATERIAL(5) road transition (light)
+#RingCtrl6 no texture
+MATERIAL(6) no texture
+#RingCtrl7 no texture
+MATERIAL(7) no texture
+#RingCtrl8 no texture
+MATERIAL(8) no texture
+#RingCtrl9 no texture
+MATERIAL(9) no texture
+#RingCtrl10 no texture
+MATERIAL(10) no texture
+#RingCtrl11 no texture
+MATERIAL(11) no texture
+#RingCtrl12 no texture
+MATERIAL(12) no texture
+#RingCtrl13 no texture
+MATERIAL(13) no texture
+#RingCtrl14 no texture
+MATERIAL(14) no texture
+#RingCtrl15 no texture
+MATERIAL(15) no texture
+#RingCtrl16 no texture
+MATERIAL(16) no texture
+#RingCtrl17 no texture
+MATERIAL(17) no texture
+#RingCtrl18 no texture
+MATERIAL(18) no texture
+#RingCtrl19 no texture
+MATERIAL(19) no texture
+#RingCtrl20 no texture
+MATERIAL(20) no texture
+#RingCtrl21 no texture
+MATERIAL(21) no texture
+#RingCtrl22 no texture
+MATERIAL(22) no texture
+#RingCtrl23 no texture
+MATERIAL(23) no texture
+#RingCtrl24 no texture
+MATERIAL(24) no texture
+#RingCtrl25 no texture
+MATERIAL(25) no texture
+MTL_FILE ../materials/road.mtl
+
+#CheckBox0 0    
+MIRROR 0
+
+
+LOG_ENTRY Used Dataset: Road: Animator Surface Shapes; { Roads } 1200 m Road + 200 m light grass
+#Library : Road: Animator Surface Shapes
+#DataSet : 1200 m Road + 200 m light grass
+#Category: Roads
+#FileID  : RdShp102
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:25
+#VehCode Road shapes
+
+EXIT_PARSFILE Roads\Shapes\RdShp102.par
+
+#BlueLink4 Road: Animator Surface Shapes`1200 m Road + 200 m light grass` Roads` , Road shape definitions
+
+add_reference_frame road_stuff_1
+reference_frame_ghosts off
+
+ENTER_PARSFILE Animator\Groups\Group105.par`10-13-2008`13:49:11
+#FullDataName Animator: Group`Slightly Cloudy Sky (Normal Resolution)`Skies
+
+ENTER_PARSFILE Animator\Frames\Frame106.par`10-13-2008`13:49:07
+#FullDataName Animator: Reference Frame`Camera Front Point w/o Yaw`Road Tracking
+ADD_REFERENCE_FRAME Camera Front Point w/o Yaw
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_camF
+SET_Y_NAME Y_camF
+SET_Z_NAME Z_camF
+
+WRT_X_camF
+ANI_X_camF
+WRT_Y_camF
+ANI_Y_camF
+WRT_Z_camF
+ANI_Z_camF
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Road Tracking } Camera Front Point w/o Yaw
+#Library : Animator: Reference Frame
+#DataSet : Camera Front Point w/o Yaw
+#Category: Road Tracking
+#FileID  : Frame106
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:07
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame106.par
+
+#BlueLink0 Animator: Reference Frame`Camera Front Point w/o Yaw` Road Tracking` , Animator data
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape145.par`10-13-2008`13:49:02
+#FullDataName Animator: Shape File Link`Slightly Cloudy Sky (Normal Resolution)`Skies
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\scenery\Slightly_Cloudy_Sky\sky_normal_res.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 15
+SET_ANGLE_Z 30
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z -50
+*SPECULAR .5
+SMOOTH_MAX_ANGLE 30
+
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 1    
+set_fogging off
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR .5 .5 .5
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Skies } Slightly Cloudy Sky (Normal Resolution)
+#Library : Animator: Shape File Link
+#DataSet : Slightly Cloudy Sky (Normal Resolution)
+#Category: Skies
+#FileID  : Shape145
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:02
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape145.par
+
+#BlueLink1 Animator: Shape File Link`Slightly Cloudy Sky (Normal Resolution)` Skies` , Animator data
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape118.par`10-13-2008`13:49:05
+#FullDataName Animator: Shape File Link`Complex Land Bowl for Light Grass`Terrain
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\scenery\landbowls\complex_land_for_light_grass.obj
+#ENDMYellow
+
+SET_COLOR .8 .8 .8
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 1
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+*SPECULAR .2
+
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR .2 .2 .2
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Terrain } Complex Land Bowl for Light Grass
+#Library : Animator: Shape File Link
+#DataSet : Complex Land Bowl for Light Grass
+#Category: Terrain
+#FileID  : Shape118
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:05
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape118.par
+
+#BlueLink2 Animator: Shape File Link`Complex Land Bowl for Light Grass` Terrain` , Animator data
+
+
+ENTER_PARSFILE Animator\Shape_links\Shape119.par`10-13-2008`13:49:05
+#FullDataName Animator: Shape File Link`Mountains`Terrain
+#MiscYellow3
+add_obj Animator\3D_shape_files_v2\scenery\horizon\mountains_w_light_grass.obj
+#ENDMYellow
+
+SET_COLOR 1 1 1
+SET_SCALE_X 15
+SET_SCALE_Y 15
+SET_SCALE_Z 3
+SET_ANGLE_Z 0
+SET_ANGLE_Y 0
+SET_ANGLE_X 0
+SET_OFFSET_X 0
+SET_OFFSET_Y 0
+SET_OFFSET_Z 0
+*SPECULAR .2
+
+#RingCtrl0 1
+#CheckBox0 1    
+set_lighting off
+#CheckBox1 0    
+set_fogging on
+#CheckBox2 1    
+mtl_ns_old on
+
+show_front on
+show_back off
+SET_SPECULAR .2 .2 .2
+
+#BlueLink2 Animator: Camera Setup`Shape Preview (Top)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Shape File Link; { Terrain } Mountains
+#Library : Animator: Shape File Link
+#DataSet : Mountains
+#Category: Terrain
+#FileID  : Shape119
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:05
+#VehCode Shape File
+
+EXIT_PARSFILE Animator\Shape_links\Shape119.par
+
+#BlueLink3 Animator: Shape File Link`Mountains` Terrain` , Animator data
+
+*X_REF_LENGTH 1
+*Y_REF_LENGTH 1
+*Z_REF_LENGTH 1
+
+#CheckBox0 0    
+
+
+#BlueLink20 Animator: Camera Setup`Shape Preview (Side)` Shape Preview` , Animator camera
+
+
+LOG_ENTRY Used Dataset: Animator: Group; { Skies } Slightly Cloudy Sky (Normal Resolution)
+#Library : Animator: Group
+#DataSet : Slightly Cloudy Sky (Normal Resolution)
+#Category: Skies
+#FileID  : Group105
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:11
+#VehCode Animator Group
+
+EXIT_PARSFILE Animator\Groups\Group105.par
+
+#BlueLink6 Animator: Group`Slightly Cloudy Sky (Normal Resolution)` Skies` , Misc. animator set
+
+add_reference_frame road_stuff_2
+reference_frame_ghosts off
+add_reference_frame road_stuff_3
+reference_frame_ghosts off
+add_reference_frame road_stuff_4
+reference_frame_ghosts off
+iroad 2
+
+
+ENTER_PARSFILE Animator\Cameras\Camera106.par`10-13-2008`13:49:12
+#FullDataName Animator: Camera Setup`Rear View (Road Ref)`Road Reference
+#RingCtrl1 0
+
+#CheckBox0 0    
+#CheckBox1 1    
+
+GHOST_COUNT 0
+SET_CAMERA_Reference_Frame Camera Front Point w/ Yaw
+
+ENTER_PARSFILE Animator\Frames\Frame116.par`10-13-2008`13:49:07
+#FullDataName Animator: Reference Frame`Camera Front Point w/ Yaw`Road Tracking
+ADD_REFERENCE_FRAME Camera Front Point w/ Yaw
+#RingCtrl0 yaw_pitch_roll
+SET_EULER_ANGLES yaw_pitch_roll
+SET_X_NAME X_camF
+SET_Y_NAME Y_camF
+SET_Z_NAME Z_camF
+SET_YAW_NAME Yaw_CamF
+
+WRT_X_camF
+ANI_X_camF
+WRT_Y_camF
+ANI_Y_camF
+WRT_Z_camF
+ANI_Z_camF
+WRT_Yaw_CamF
+ANI_Yaw_CamF
+
+LOG_ENTRY Used Dataset: Animator: Reference Frame; { Road Tracking } Camera Front Point w/ Yaw
+#Library : Animator: Reference Frame
+#DataSet : Camera Front Point w/ Yaw
+#Category: Road Tracking
+#FileID  : Frame116
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:07
+#VehCode Reference frame
+
+EXIT_PARSFILE Animator\Frames\Frame116.par
+
+#BlueLink0 Animator: Reference Frame`Camera Front Point w/ Yaw` Road Tracking` , Reference frame for outside camera
+
+SET_LOOKPOINT_Reference_Frame Camera Front Point w/ Yaw
+SET_LOOKPOINT_X 5
+SET_LOOKPOINT_Y -1.5
+SET_LOOKPOINT_Z 1
+SET_AZIMUTH 180
+SET_ELEVATION 3
+SET_DISTANCE 39
+GHOST_COUNT 0
+*LIGHT_X -1000
+*LIGHT_Y -1000
+*LIGHT_Z 1000
+FOG_SCALE 0.2
+SET_FIELD_OF_VIEW 9.9
+SUN_POSITION -1000 -1000 1000
+
+LOG_ENTRY Used Dataset: Animator: Camera Setup; { Road Reference } Rear View (Road Ref)
+#Library : Animator: Camera Setup
+#DataSet : Rear View (Road Ref)
+#Category: Road Reference
+#FileID  : Camera106
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:49:12
+#VehCode Camera
+
+EXIT_PARSFILE Animator\Cameras\Camera106.par
+
+#BlueLink5 Animator: Camera Setup`Rear View (Road Ref)` Road Reference` , Camera
+
+
+ENTER_PARSFILE Roads\3D_Road\Road118.ani`01-11-2023`14:50:46
+add_reference_frame The Road
+reference_frame_ghosts off
+
+add_obj Roads\3D_Road\Road118_1.obj
+set_color 0.878 0.878 0.878
+show_front on
+show_back off
+compute_normals on
+set_specular 0.15 0.15 0.15
+
+add_obj Roads\3D_Road\Road118_2.obj
+set_color 0.878 0.878 0.878
+show_front on
+show_back off
+compute_normals on
+set_specular 0 0 0
+
+add_obj Roads\3D_Road\Road118_3.obj
+set_color 0.878 0.878 0.878
+show_front on
+show_back off
+compute_normals on
+set_specular 0 0 0
+
+add_obj Roads\3D_Road\Road118_4.obj
+set_color 0.878 0.878 0.878
+show_front on
+show_back off
+compute_normals on
+set_specular 0 0 0
+
+add_obj Roads\3D_Road\Road118_5.obj
+set_color 0.878 0.878 0.878
+show_front on
+show_back off
+compute_normals on
+set_specular 0 0 0
+
+
+
+EXIT_PARSFILE Roads\3D_Road\Road118.ani
+
+*IMAGE_ROAD Roads\Graphics\flat_straight.EMF
+
+LOG_ENTRY Used Dataset: Road: 3D Surface; { Straight } Flat
+#Library : Road: 3D Surface
+#DataSet : Flat
+#Category: Straight
+#FileID  : Road118
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 01-11-2023 14:50:47
+#VehCode 3D road
+
+EXIT_PARSFILE Roads\3D_Road\Road118.par
+
+#BlueLink9 Road: 3D Surface`Flat` Straight` , Road/wind/misc.
+
+Opt_SC 0
+SPEED 0
+
+ENTER_PARSFILE IO_Channels\W_Channels\W_Ch103.par`10-13-2008`13:48:43
+#FullDataName I/O Channels: Write`Basic outputs`
+#CheckBox0 0    
+OPT_ALL_WRITE 0
+#CheckBox1 0    
+OPT_FMT_CSV 0
+#CheckBox2 0    
+OPT_FMT_MAT 0
+#CheckBox3 0    
+
+*README_FILE Programs\solvers\ReadMe\fixed_caster_outputs_tab.txt
+
+#RingCtrl0 1
+#MiscYellow0
+#Fx_Aero
+#Fz_Aero
+#My_Aero
+#My_Bk_1
+#My_Bk_2
+#My_DR_1
+#My_DR_2
+#PbkCh_1
+#PbkCh_2
+#PbkD_1
+#PbkD_2
+#PbkMs_1
+#PbkMs_2
+#X_camF
+#X_camR
+#Y_camF
+#Y_camR
+#Yaw_CamF
+#Yaw_CamR
+#Z_camF
+#Z_camR
+#AVx
+#AVy
+#AVz
+#AxBf_SM
+#Ax_SM
+#AyBf_SM
+#Ay_SM
+#AzBf_SM
+#Az_SM
+#Pitch
+#Roll
+#Roll_E
+#Vx
+#VxBf_SM
+#Vy
+#VyBf_SM
+#Vz
+#VzBf_SM
+#Xo
+#Yaw
+#Yo
+#Zo
+#MuX_1
+#MuX_2
+#MuY_1
+#MuY_2
+#PitchG1
+#PitchG2
+#RollG1
+#RollG2
+#Zgnd_1
+#Zgnd_2
+#dZdX_1
+#dZdY_1
+#dZdY_2
+#shadow
+#AV_Eng
+#AV_Spkt
+#AV_Trans
+#A_Cha_L
+#A_Cha_U
+#ClutchTr
+#F_Cha_L
+#F_Cha_U
+#GearAuto
+#GearStat
+#Gear_Man
+#K_TC
+#M_EngMax
+#M_EngMin
+#M_EngOut
+#M_Eng_In
+#M_Sprkt
+#M_TC_IN
+#PwrEngO
+#PwrTrans
+#PwrWheel
+#Pwr_TC
+#Qfuel
+#Mfuel
+#R_AV_TC
+#R_M_TC
+#Rgear_Tr
+#Rol_Ch_L
+#Rol_Ch_U
+#RotTC_IN
+#RotTC_OT
+#RotTrans
+#Rot_Eng
+#Rot_Spkt
+#Thr_Eng
+#Throttle
+#X_Rw_Lp
+#X_Rw_Up
+#X_Spk_Lp
+#X_Spk_Up
+#Y_Rw_Lp
+#Y_Rw_Up
+#Y_Spk_Lp
+#Y_Spk_Up
+#Yaw_Ch_L
+#Yaw_Ch_U
+#Z_Rw_Lp
+#Z_Rw_Up
+#Z_Spk_Lp
+#Z_Spk_Up
+#Fy_Rider
+#Lat_Targ
+#Lat_Veh
+#Lat_prev
+#Lateral
+#X_Target
+#Y_Target
+#AY_Rd_Mv
+#AZ_Rd_Mv
+#Mx_Rider
+#Pit_ArmL
+#Pit_ArmR
+#Pit_LegL
+#Pit_LegR
+#Pitch_RD
+#Rol_ArmL
+#Rol_ArmR
+#Rol_LegL
+#Rol_LegR
+#RollE_RD
+#Roll_RDR
+#VY_Rd_Mv
+#VZ_Rd_Mv
+#X_Hip_L
+#X_Hip_R
+#X_RDR
+#X_Shol_L
+#X_Shol_R
+#X_Step_L
+#X_Step_R
+#X_leg_cm
+#Y_Hip_L
+#Y_Hip_R
+#Y_RDR
+#Y_Rd_Mov
+#Y_Shol_L
+#Y_Shol_R
+#Y_Step_L
+#Y_Step_R
+#Y_leg_cm
+#Yaw_ArmL
+#Yaw_ArmR
+#Yaw_LegL
+#Yaw_LegR
+#Yaw_RDR
+#Z_Hip_L
+#Z_Hip_R
+#Z_RDR
+#Z_Rd_Mov
+#Z_Shol_L
+#Z_Shol_R
+#Z_Step_L
+#Z_Step_R
+#Z_leg_cm
+#Station
+#X_Design
+#Y_Design
+#M_Bend
+#M_STR_SP
+#M_StrSys
+#M_Str_In
+#M_Twist
+#Pitch_St
+#Roll_Str
+#Rot_bend
+#Rot_twst
+#Steer
+#X_Grip_L
+#X_Grip_R
+#X_Str
+#Y_Grip_L
+#Y_Grip_R
+#Y_Str
+#Yaw_Str
+#Z_Grip_L
+#Z_Grip_R
+#Z_Str
+#CmpRS_1
+#CmpRS_2
+#CmpS_1
+#CmpS_2
+#Fd_1
+#Fd_2
+#Fs_1
+#Fs_2
+#Fsus_1
+#Fsus_2
+#JncR_1
+#JncR_2
+#Jounce1
+#Jounce2
+#Pitch_Fr
+#Pitch_hb
+#R_Lev_1
+#R_Lev_2
+#Roll_Frk
+#Roll_hub
+#X_Fork
+#Y_Fork
+#Yaw_Frk
+#Yaw_hub
+#Z_Fork
+#Event
+#T_Event
+#T_Stamp
+#AlphL_1
+#AlphL_2
+#Alpha_1
+#Alpha_2
+#CmpT_1
+#CmpT_2
+#Fx_1
+#Fx_2
+#Fy_1
+#Fy_2
+#Fz_1
+#Fz_2
+#Gamma_1
+#Gamma_2
+#KappL_1
+#KappL_2
+#Kappa_1
+#Kappa_2
+#Mx_1
+#Mx_2
+#My_RR_1
+#My_RR_2
+#Mz_1
+#Mz_2
+#RreCmb_1
+#RreCmb_2
+#VxCTC_1
+#VxCTC_2
+#VxWC_1
+#VxWC_2
+#Vx_1
+#Vx_2
+#VyCTC_1
+#VyCTC_2
+#VyWC_1
+#VyWC_2
+#Xctc_1
+#Xctc_2
+#Yctc_1
+#Yctc_2
+#AVx_1
+#AVx_2
+#AVy_W1
+#AVy_W2
+#AVy_Wf1
+#AVy_Wf2
+#AVz_1
+#AVz_2
+#Ax_WC1
+#Ax_WC2
+#Ay_WC1
+#Ay_WC2
+#Az_WC1
+#Az_WC2
+#Fx_Wc_1
+#Fx_Wc_2
+#Fy_Wc_1
+#Fy_Wc_2
+#Fz_Wc_1
+#Fz_Wc_2
+#Mx_Wc_1
+#Mx_Wc_2
+#My_Wc_1
+#My_Wc_2
+#Mz_Wc_1
+#Mz_Wc_2
+#Pitch_1
+#Pitch_2
+#RollE_1
+#RollE_2
+#Roll_W1
+#Roll_W2
+#Rot_W1
+#Rot_W2
+#VxW0_1
+#VxW0_2
+#VyW0_1
+#VyW0_2
+#VzW0_1
+#VzW0_2
+#X_WC1
+#X_WC2
+#Y_WC1
+#Y_WC2
+#YawE_1
+#YawE_2
+#Yaw_W1
+#Yaw_W2
+#Z_WC1
+#Z_WC2
+#l_mx_1
+#l_mx_2
+#ENDMYellow
+
+WRT_Fx_Aero
+WRT_Fz_Aero
+WRT_My_Aero
+WRT_My_Bk_1
+WRT_My_Bk_2
+WRT_My_DR_1
+WRT_My_DR_2
+WRT_PbkCh_1
+WRT_PbkCh_2
+WRT_PbkD_1
+WRT_PbkD_2
+WRT_PbkMs_1
+WRT_PbkMs_2
+WRT_X_camF
+WRT_X_camR
+WRT_Y_camF
+WRT_Y_camR
+WRT_Yaw_CamF
+WRT_Yaw_CamR
+WRT_Z_camF
+WRT_Z_camR
+WRT_AVx
+WRT_AVy
+WRT_AVz
+WRT_AxBf_SM
+WRT_Ax_SM
+WRT_AyBf_SM
+WRT_Ay_SM
+WRT_AzBf_SM
+WRT_Az_SM
+WRT_Pitch
+WRT_Roll
+WRT_Roll_E
+WRT_Vx
+WRT_VxBf_SM
+WRT_Vy
+WRT_VyBf_SM
+WRT_Vz
+WRT_VzBf_SM
+WRT_Xo
+WRT_Yaw
+WRT_Yo
+WRT_Zo
+WRT_MuX_1
+WRT_MuX_2
+WRT_MuY_1
+WRT_MuY_2
+WRT_PitchG1
+WRT_PitchG2
+WRT_RollG1
+WRT_RollG2
+WRT_Zgnd_1
+WRT_Zgnd_2
+WRT_dZdX_1
+WRT_dZdY_1
+WRT_dZdY_2
+WRT_shadow
+WRT_AV_Eng
+WRT_AV_Spkt
+WRT_AV_Trans
+WRT_A_Cha_L
+WRT_A_Cha_U
+WRT_ClutchTr
+WRT_F_Cha_L
+WRT_F_Cha_U
+WRT_GearAuto
+WRT_GearStat
+WRT_Gear_Man
+WRT_K_TC
+WRT_M_EngMax
+WRT_M_EngMin
+WRT_M_EngOut
+WRT_M_Eng_In
+WRT_M_Sprkt
+WRT_M_TC_IN
+WRT_PwrEngO
+WRT_PwrTrans
+WRT_PwrWheel
+WRT_Pwr_TC
+WRT_Qfuel
+WRT_Mfuel
+WRT_R_AV_TC
+WRT_R_M_TC
+WRT_Rgear_Tr
+WRT_Rol_Ch_L
+WRT_Rol_Ch_U
+WRT_RotTC_IN
+WRT_RotTC_OT
+WRT_RotTrans
+WRT_Rot_Eng
+WRT_Rot_Spkt
+WRT_Thr_Eng
+WRT_Throttle
+WRT_X_Rw_Lp
+WRT_X_Rw_Up
+WRT_X_Spk_Lp
+WRT_X_Spk_Up
+WRT_Y_Rw_Lp
+WRT_Y_Rw_Up
+WRT_Y_Spk_Lp
+WRT_Y_Spk_Up
+WRT_Yaw_Ch_L
+WRT_Yaw_Ch_U
+WRT_Z_Rw_Lp
+WRT_Z_Rw_Up
+WRT_Z_Spk_Lp
+WRT_Z_Spk_Up
+WRT_Fy_Rider
+WRT_Lat_Targ
+WRT_Lat_Veh
+WRT_Lat_prev
+WRT_Lateral
+WRT_X_Target
+WRT_Y_Target
+WRT_AY_Rd_Mv
+WRT_AZ_Rd_Mv
+WRT_Mx_Rider
+WRT_Pit_ArmL
+WRT_Pit_ArmR
+WRT_Pit_LegL
+WRT_Pit_LegR
+WRT_Pitch_RD
+WRT_Rol_ArmL
+WRT_Rol_ArmR
+WRT_Rol_LegL
+WRT_Rol_LegR
+WRT_RollE_RD
+WRT_Roll_RDR
+WRT_VY_Rd_Mv
+WRT_VZ_Rd_Mv
+WRT_X_Hip_L
+WRT_X_Hip_R
+WRT_X_RDR
+WRT_X_Shol_L
+WRT_X_Shol_R
+WRT_X_Step_L
+WRT_X_Step_R
+WRT_X_leg_cm
+WRT_Y_Hip_L
+WRT_Y_Hip_R
+WRT_Y_RDR
+WRT_Y_Rd_Mov
+WRT_Y_Shol_L
+WRT_Y_Shol_R
+WRT_Y_Step_L
+WRT_Y_Step_R
+WRT_Y_leg_cm
+WRT_Yaw_ArmL
+WRT_Yaw_ArmR
+WRT_Yaw_LegL
+WRT_Yaw_LegR
+WRT_Yaw_RDR
+WRT_Z_Hip_L
+WRT_Z_Hip_R
+WRT_Z_RDR
+WRT_Z_Rd_Mov
+WRT_Z_Shol_L
+WRT_Z_Shol_R
+WRT_Z_Step_L
+WRT_Z_Step_R
+WRT_Z_leg_cm
+WRT_Station
+WRT_X_Design
+WRT_Y_Design
+WRT_M_Bend
+WRT_M_STR_SP
+WRT_M_StrSys
+WRT_M_Str_In
+WRT_M_Twist
+WRT_Pitch_St
+WRT_Roll_Str
+WRT_Rot_bend
+WRT_Rot_twst
+WRT_Steer
+WRT_X_Grip_L
+WRT_X_Grip_R
+WRT_X_Str
+WRT_Y_Grip_L
+WRT_Y_Grip_R
+WRT_Y_Str
+WRT_Yaw_Str
+WRT_Z_Grip_L
+WRT_Z_Grip_R
+WRT_Z_Str
+WRT_CmpRS_1
+WRT_CmpRS_2
+WRT_CmpS_1
+WRT_CmpS_2
+WRT_Fd_1
+WRT_Fd_2
+WRT_Fs_1
+WRT_Fs_2
+WRT_Fsus_1
+WRT_Fsus_2
+WRT_JncR_1
+WRT_JncR_2
+WRT_Jounce1
+WRT_Jounce2
+WRT_Pitch_Fr
+WRT_Pitch_hb
+WRT_R_Lev_1
+WRT_R_Lev_2
+WRT_Roll_Frk
+WRT_Roll_hub
+WRT_X_Fork
+WRT_Y_Fork
+WRT_Yaw_Frk
+WRT_Yaw_hub
+WRT_Z_Fork
+WRT_Event
+WRT_T_Event
+WRT_T_Stamp
+WRT_AlphL_1
+WRT_AlphL_2
+WRT_Alpha_1
+WRT_Alpha_2
+WRT_CmpT_1
+WRT_CmpT_2
+WRT_Fx_1
+WRT_Fx_2
+WRT_Fy_1
+WRT_Fy_2
+WRT_Fz_1
+WRT_Fz_2
+WRT_Gamma_1
+WRT_Gamma_2
+WRT_KappL_1
+WRT_KappL_2
+WRT_Kappa_1
+WRT_Kappa_2
+WRT_Mx_1
+WRT_Mx_2
+WRT_My_RR_1
+WRT_My_RR_2
+WRT_Mz_1
+WRT_Mz_2
+WRT_RreCmb_1
+WRT_RreCmb_2
+WRT_VxCTC_1
+WRT_VxCTC_2
+WRT_VxWC_1
+WRT_VxWC_2
+WRT_Vx_1
+WRT_Vx_2
+WRT_VyCTC_1
+WRT_VyCTC_2
+WRT_VyWC_1
+WRT_VyWC_2
+WRT_Xctc_1
+WRT_Xctc_2
+WRT_Yctc_1
+WRT_Yctc_2
+WRT_AVx_1
+WRT_AVx_2
+WRT_AVy_W1
+WRT_AVy_W2
+WRT_AVy_Wf1
+WRT_AVy_Wf2
+WRT_AVz_1
+WRT_AVz_2
+WRT_Ax_WC1
+WRT_Ax_WC2
+WRT_Ay_WC1
+WRT_Ay_WC2
+WRT_Az_WC1
+WRT_Az_WC2
+WRT_Fx_Wc_1
+WRT_Fx_Wc_2
+WRT_Fy_Wc_1
+WRT_Fy_Wc_2
+WRT_Fz_Wc_1
+WRT_Fz_Wc_2
+WRT_Mx_Wc_1
+WRT_Mx_Wc_2
+WRT_My_Wc_1
+WRT_My_Wc_2
+WRT_Mz_Wc_1
+WRT_Mz_Wc_2
+WRT_Pitch_1
+WRT_Pitch_2
+WRT_RollE_1
+WRT_RollE_2
+WRT_Roll_W1
+WRT_Roll_W2
+WRT_Rot_W1
+WRT_Rot_W2
+WRT_VxW0_1
+WRT_VxW0_2
+WRT_VyW0_1
+WRT_VyW0_2
+WRT_VzW0_1
+WRT_VzW0_2
+WRT_X_WC1
+WRT_X_WC2
+WRT_Y_WC1
+WRT_Y_WC2
+WRT_YawE_1
+WRT_YawE_2
+WRT_Yaw_W1
+WRT_Yaw_W2
+WRT_Z_WC1
+WRT_Z_WC2
+WRT_l_mx_1
+WRT_l_mx_2
+
+LOG_ENTRY Used Dataset: I/O Channels: Write; Basic outputs
+#Library : I/O Channels: Write
+#DataSet : Basic outputs
+#Category: 
+#FileID  : W_Ch103
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:43
+#VehCode Write Channels
+
+EXIT_PARSFILE IO_Channels\W_Channels\W_Ch103.par
+
+#BlueLink13 I/O Channels: Write`Basic outputs` ` , Output variables
+
+
+
+ENTER_PARSFILE Plot\Setup\Plot109.par`10-13-2008`13:48:38
+#FullDataName Plot: Setup`Vx -- longitudinal speed`Bike Motion
+
+ENTER_PARSFILE Plot\Format\PlotFmt101.par`10-13-2008`13:48:39
+#FullDataName Plot: Format`Default settings`
+#RingCtrl0 Axes
+AXES Axes
+#RingCtrl1 Noframe
+FRAME Noframe
+#RingCtrl2 NoGrid
+GRID NoGrid
+#RingCtrl3 FileTitle
+LEGENDFILE FileTitle
+#RingCtrl4 RigidBodyName
+LEGENDDATA_1 RigidBodyName
+#RingCtrl5 AutoLocation
+LEGENDLOCATION AutoLocation
+#RingCtrl6 Regular
+TITLEFONTSTYLE Regular
+#RingCtrl7 Regular
+LEGENDFONTSTYLE Regular
+#RingCtrl8 Regular
+LABELFONTSTYLE Regular
+#RingCtrl9 Regular
+TICLABELFONTSTYLE Regular
+#RingCtrl10 0
+TITLELOCATION 0
+LEGENDPERCENT 40
+TITLEFONTSIZE 14
+LEGENDFONTSIZE 12
+LABELFONTSIZE 14
+TICLABELFONTSIZE 12
+
+TITLEFONTNAME Arial
+LEGENDFONTNAME Arial
+LABELFONTNAME Arial
+TICLABELFONTNAME Arial
+SYMBOLS 0,1,2,3,4,5,6,7,8,9,10,0,1,2,3,4,5,6,7,8
+LINESTYL 1,1,1,1,1,1,2,1,1,1,2,1,1,1,2,1,1,1,2,1
+COLORS 8,2,14,3,4,0,6,7,8,9,10,11,12,13,14,15,1,2,3,4
+
+LOG_ENTRY Used Dataset: Plot: Format; Default settings
+#Library : Plot: Format
+#DataSet : Default settings
+#Category: 
+#FileID  : PlotFmt101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:39
+#VehCode Plot format
+
+EXIT_PARSFILE Plot\Format\PlotFmt101.par
+
+#BlueLink0 Plot: Format`Default settings` ` , Plot format
+
+
+ENTER_PARSFILE Plot\Transform\PlotTfm101.par`10-13-2008`13:48:40
+#FullDataName Plot: Data Transform`No Filter`
+#RingCtrl0 None
+FILTER None
+
+
+
+LOG_ENTRY Used Dataset: Plot: Data Transform; No Filter
+#Library : Plot: Data Transform
+#DataSet : No Filter
+#Category: 
+#FileID  : PlotTfm101
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:40
+#VehCode Plot data transform
+
+EXIT_PARSFILE Plot\Transform\PlotTfm101.par
+
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform
+
+
+#MiscYellow0
+PLOTCHANNELS Vx, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 0
+#RingCtrl6 0
+#RingCtrl7 0
+
+
+PTITLE Vx -- longitudinal speed
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Bike Motion } Vx -- longitudinal speed
+#Library : Plot: Setup
+#DataSet : Vx -- longitudinal speed
+#Category: Bike Motion
+#FileID  : Plot109
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:38
+#VehCode Plot setup
+
+EXIT_PARSFILE Plot\Setup\Plot109.par
+
+#BlueLink15 Plot: Setup`Vx -- longitudinal speed` Bike Motion` , Plot
+
+
+
+ENTER_PARSFILE Plot\Setup\Plot123.par`10-13-2008`13:48:38
+#FullDataName Plot: Setup`Drive torque`Powertrain
+#BlueLink0 Plot: Format`Default settings` ` , Plot format
+
+#BlueLink1 Plot: Data Transform`No Filter` ` , Data transform
+
+
+#MiscYellow0
+PLOTCHANNELS My_DR_1, Time
+PLOTCHANNELS My_DR_2, Time
+
+#ENDMYellow
+
+
+#RingCtrl0 Linear
+YLINEAR Linear
+#RingCtrl1 Linear
+XLINEAR Linear
+#RingCtrl2 Auto
+YMaxmin Auto
+#RingCtrl3 Auto
+XMaxmin Auto
+#RingCtrl4 0
+#RingCtrl5 1
+#RingCtrl6 0
+#RingCtrl7 1
+
+
+PTITLE Drive torque
+
+
+LOG_ENTRY Used Dataset: Plot: Setup; { Powertrain } Drive torque
+#Library : Plot: Setup
+#DataSet : Drive torque
+#Category: Powertrain
+#FileID  : Plot123
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 10-13-2008 13:48:38
+#VehCode Plot setup
+
+EXIT_PARSFILE Plot\Setup\Plot123.par
+
+#BlueLink16 Plot: Setup`Drive torque` Powertrain` , Plot
+
+#BlueLink23 BikeSim Run Control`cuoiki #2` ` , Overlay run or ERD file
+
+
+
+Title cuoiki #1
+DATASET_TITLE cuoiki #1
+
+LOG_ENTRY Used Dataset: BikeSim Run Control; cuoiki #1
+#Library : BikeSim Run Control
+#DataSet : cuoiki #1
+#Category: 
+#FileID  : Run258
+#Product : BikeSim Version 2.0, October 2008
+#Last update: 02-08-2023 13:21:28
+#VehCode Run
+
+EXIT_PARSFILE Runs\Run258.par
+
+
+
+END
